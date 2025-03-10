@@ -125,5 +125,24 @@ public boolean removeFirst() {
     
     return true;  // El primer nodo fue eliminado correctamente.
 }
+/**
+ * Verifica si un valor existe en la lista.
+ * 
+ * @param valor El valor que se busca en la lista.
+ * @return true si el valor se encuentra en la lista, false en caso contrario.
+ */
+public boolean contains(int valor) {
+    Nodo nActual = Inicial;  // Empieza desde el primer nodo.
+    
+    // Se recorre la lista buscando el valor.
+    while (nActual != null) {
+        if (nActual.getValor() == valor) {  // Si encontramos el valor en el nodo actual
+            return true;  // El valor está presente en la lista.
+        }
+        nActual = nActual.getSiguiente();  // Avanzamos al siguiente nodo.
+    }
+    
+    return false;  // El valor no se encuentra en la lista.
+}
 
 }
