@@ -151,5 +151,17 @@ public void clear() {
     Inicial = null;  // Se desvincula la lista desde el primer nodo.
     tam = 0;  // Se resetea el tamaño de la lista.
 }
+@Override
+public String toString() {
+    Nodo nActual = Inicial;
+    String resultado = "";
+
+    while (nActual != null) {
+        resultado += nActual.getValor() + (nActual.getSiguiente() != null ? " --> " : "");
+        nActual = nActual.getSiguiente();
+    }
+
+    return resultado.isEmpty() ? "La lista está vacía." : resultado;
+}
 
 }
