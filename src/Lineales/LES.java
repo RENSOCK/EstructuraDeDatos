@@ -25,5 +25,13 @@ public class LES {
 public boolean isEmpty() {
     return Inicial == null;  // Devuelve true si 'Inicial' es null, indicando que la lista está vacía.
 }
+/**
+ * Devuelve el tamaño actual de la lista.
+ *
+ * @return El tamaño de la lista, es decir, la cantidad de nodos en ella.
+ */
+public int size() {
+    return tam;  // Retorna el valor de 'tam', que representa la cantidad de elementos en la lista.
+}
 
 }
