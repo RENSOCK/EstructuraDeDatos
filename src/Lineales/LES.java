@@ -86,4 +86,44 @@ public boolean removeLast() {
         return false;  // Si la lista está vacía, no se puede eliminar un nodo.
     }
 }
+/**
+ * Añade un nodo al final de la lista.
+ * 
+ * @param nN El nodo que se desea agregar al final de la lista.
+ * @return true si el nodo fue añadido correctamente, false en caso contrario.
+ */
+public boolean addLast(Nodo nN) {
+    if (this.isEmpty()) {  // Si la lista está vacía
+        Inicial = nN;  // El nodo se convierte en el primer nodo de la lista.
+        tam++;  // Se incrementa el tamaño de la lista.
+        return true;  // El nodo se añadió correctamente.
+    } else {  // Si la lista no está vacía
+        Nodo nActual = Inicial;  // Comienza desde el primer nodo.
+        // Se recorre la lista hasta llegar al último nodo
+        while (nActual.getSiguiente() != null) {
+            nActual = nActual.getSiguiente();  // Avanza al siguiente nodo.
+        }
+        nActual.setSiguiente(nN);  // Establece el siguiente del último nodo al nuevo nodo.
+        tam++;  // Se incrementa el tamaño de la lista.
+        return true;  // El nodo fue añadido correctamente al final.
+    }
+}
+/**
+ * Elimina el primer nodo de la lista.
+ * 
+ * @return true si el primer nodo fue eliminado correctamente, false si la lista está vacía.
+ */
+public boolean removeFirst() {
+    if (this.isEmpty()) {  // Si la lista está vacía
+        return false;  // No se puede eliminar un nodo de una lista vacía.
+    }
+
+    Nodo nodoAEliminar = Inicial;  // Se guarda el primer nodo en una variable auxiliar.
+    Inicial = Inicial.getSiguiente();  // El primer nodo se elimina al hacer que 'Inicial' apunte al siguiente nodo.
+    
+    tam--;  // Decrementa el tamaño de la lista.
+    
+    return true;  // El primer nodo fue eliminado correctamente.
+}
+
 }
