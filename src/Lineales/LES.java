@@ -4,10 +4,18 @@
  */
 package Lineales;
 
+import Nodos.Nodo;
+
 /**
  *
  * @author ManuelRios
  */
 public class LES {
     
+    /**
+     *
+     */
+    private Nodo Inicial;
+    private int tam;
+
 }
