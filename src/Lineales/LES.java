@@ -144,5 +144,12 @@ public boolean contains(int valor) {
     
     return false;  // El valor no se encuentra en la lista.
 }
+/**
+ * Elimina todos los nodos de la lista, dejándola vacía.
+ */
+public void clear() {
+    Inicial = null;  // Se desvincula la lista desde el primer nodo.
+    tam = 0;  // Se resetea el tamaño de la lista.
+}
 
 }
